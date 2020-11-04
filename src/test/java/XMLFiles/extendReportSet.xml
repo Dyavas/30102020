@@ -1,12 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <extentreports>
     <configuration>
-        <theme>dark</theme>
+        <!-- report Thema-->
+        <theme>standard</theme>
+        <!-- kullanilacak dil destek formati-->
         <encoding>UTF-8</encoding>
-        <protocol>https</protocol>
-        <documentTitle>Basqar extend Report</documentTitle>
-        <reportName>Basqar Report</reportName>
+        <!-- testortami protokolu -->
+        <protokol>https</protokol>
+        <!-- Sayfamizin basligindaki isim -->
+        <documentTitle>Basqar extend report</documentTitle>
+        <!-- Projemizin ismi -->
+        <reportName>Basqar report</reportName>
+        <!-- tarih formati -->
         <dateFormat>yyyy-MM-dd</dateFormat>
+        <!-- Saat formati-->
         <timeFormat>HH:mm:ss</timeFormat>
+
     </configuration>
 </extentreports>
