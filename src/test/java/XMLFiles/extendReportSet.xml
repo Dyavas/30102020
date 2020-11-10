@@ -1,20 +1,42 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+
 <extentreports>
     <configuration>
-        <!-- report Thema-->
-        <theme>standard</theme>
-        <!-- kullanilacak dil destek formati-->
+
+        <!-- report theme --> <!-- standard, dark -->
+        <theme>dark</theme>
+
+        <!-- document encoding -->  <!-- defaults to UTF-8 -->
         <encoding>UTF-8</encoding>
-        <!-- testortami protokolu -->
-        <protokol>https</protokol>
-        <!-- Sayfamizin basligindaki isim -->
+
+        <!-- protocol for script and stylesheets -->   <!-- defaults to https -->
+        <protocol>https</protocol>
+
+        <!-- title of the document -->
         <documentTitle>Basqar extend report</documentTitle>
-        <!-- Projemizin ismi -->
+
+        <!-- report name - displayed at top-nav -->
         <reportName>Basqar report</reportName>
-        <!-- tarih formati -->
+
+        <!-- global date format override -->  <!-- defaults to yyyy-MM-dd -->
         <dateFormat>yyyy-MM-dd</dateFormat>
-        <!-- Saat formati-->
+
+        <!-- global time format override -->   <!-- defaults to HH:mm:ss -->
         <timeFormat>HH:mm:ss</timeFormat>
 
+        <!--        &lt;!&ndash; custom javascript &ndash;&gt;-->
+        <!--        <scripts>-->
+        <!--            <![CDATA[-->
+        <!--        $(document).ready(function() {-->
+
+        <!--        });-->
+        <!--      ]]>-->
+        <!--        </scripts>-->
+
+        <!--        &lt;!&ndash; custom styles &ndash;&gt;-->
+        <!--        <styles>-->
+        <!--            <![CDATA[-->
+
+        <!--      ]]>-->
+        <!--        </styles>-->
     </configuration>
 </extentreports>

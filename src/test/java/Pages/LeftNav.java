@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LeftNav extends _Parent{
+public class LeftNav extends _Parent {
 public LeftNav(){
     PageFactory.initElements(driver,this);
 }
@@ -15,10 +15,22 @@ public LeftNav(){
         private WebElement parameters;
     @FindBy(xpath = "(//span[text()='Countries'])[1]")
     private WebElement countries;
+    @FindBy(xpath = "//span[text()='Human Resources']")
+    private WebElement humanResources;
+    @FindBy(xpath = "(//span[text()='Setup'])[3]")
+    private WebElement humanSetup;
+    @FindBy(xpath = "//span[text()='Position Salary']")
+    private WebElement positionSalary;
+    @FindBy(xpath = "//span[text()='Positions']")
+    private WebElement positions;
+
+
+
+
 
 
     WebElement myElement;
-public void findElementAndClickFuncktion(String elementName){
+public void findElementAndClickFunction(String elementName){
     switch (elementName){
         case "setupOne":{
             myElement=setupOne;
@@ -32,6 +44,24 @@ public void findElementAndClickFuncktion(String elementName){
             myElement=countries;
             break;
         }
+        case "humanResources":{
+            myElement=humanResources;
+            break;
+        }
+        case "humanSetup":{
+            myElement=humanSetup;
+            break;
+        }
+        case "positionSalary":{
+            myElement=positionSalary;
+            break;
+        }
+        case "positions":{
+            myElement=positions;
+            break;
+        }
+
+
 
     }
     clickFunction(myElement);
