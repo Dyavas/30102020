@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class _01_LoginSteps {
+public class LoginSteps {
 
     WebDriver driver;
     @Given("^Navigate to basqar$")

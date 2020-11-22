@@ -23,7 +23,19 @@ public LeftNav(){
     private WebElement positionSalary;
     @FindBy(xpath = "//span[text()='Positions']")
     private WebElement positions;
+    @FindBy(xpath = "(//span[text()='Reports'])[4]")
+    private WebElement reports;
+    @FindBy(xpath = "(//span[text()='Setup'])[7]")
+    private WebElement reportSetup;
+    @FindBy(xpath = "//span[text()='Excel Template']")
+    private WebElement excelTemplate;
+    @FindBy(xpath = "//span[text()='Salary Types']")
+    private WebElement salaryTypes;
 
+    @FindBy(xpath = "//span[text()='Salary Modifiers']")
+    private WebElement salaryModifiers;
+    @FindBy(xpath = "//span[text()='Salary Constants']")
+    private WebElement salaryConstants;
 
 
 
@@ -32,35 +44,56 @@ public LeftNav(){
     WebElement myElement;
 public void findElementAndClickFunction(String elementName){
     switch (elementName){
-        case "setupOne":{
+        case "setupOne":
             myElement=setupOne;
             break;
-        }
-        case "parameters":{
+
+        case "parameters":
             myElement=parameters;
             break;
-        }
-        case "countries":{
+
+        case "countries":
             myElement=countries;
             break;
-        }
-        case "humanResources":{
+
+        case "humanResources":
             myElement=humanResources;
             break;
-        }
-        case "humanSetup":{
+
+        case "humanSetup":
             myElement=humanSetup;
             break;
-        }
-        case "positionSalary":{
+
+        case "positionSalary":
             myElement=positionSalary;
             break;
-        }
-        case "positions":{
+
+        case "positions":
             myElement=positions;
             break;
-        }
 
+        case "reports":
+            myElement=reports;
+            break;
+
+        case "reportSetup":
+            myElement=reportSetup;
+            break;
+
+
+        case "excelTemplate":
+            myElement=excelTemplate;
+            break;
+
+        case "salaryTypes":
+            myElement=salaryTypes;
+            break;
+        case "salaryModifiers":
+            myElement=salaryModifiers;
+            break;
+        case "salaryConstants":
+            myElement=salaryConstants;
+            break;
 
 
     }

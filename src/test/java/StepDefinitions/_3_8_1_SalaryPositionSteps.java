@@ -7,7 +7,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class _02_SalarySteps {
+public class _3_8_1_SalaryPositionSteps {
     DialogContent dialogContent=new DialogContent();
     LeftNav leftNav=new LeftNav();
     @And("^Navigate to Salary page$")

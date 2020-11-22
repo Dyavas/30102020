@@ -44,14 +44,14 @@ public class DialogContent extends _Parent {
     private WebElement ErrorMessage;
 
     @FindBy(xpath = "//ms-add-button//button")
-    //ms-add-button[@tooltip='POSITIONS.TITLE.ADD']
+    ////ms-add-button
     private WebElement addButton;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='title']/input")
     private WebElement newInput;
     @FindBy(xpath = "//ms-save-button[@class='ng-star-inserted']")
     private WebElement saveBtn;
 
-    @FindBy(xpath = "//input[@matinput]")
+    @FindBy(xpath = "(//input[@matinput])[1]")
     private WebElement erstSearchName;
 
     @FindBy(xpath = "//span[text()=' Search ']")
@@ -78,9 +78,16 @@ public class DialogContent extends _Parent {
     })
     public List<WebElement> userTypeAllOptions;
 
+
     @FindBy(xpath = "//span[text()=' Yes ']")
     private WebElement yesBtn;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
+    private WebElement nameInput;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']/input")
+    private WebElement shortnameInput;
+    @FindBy(xpath = "//ms-dialog-buttons//ms-save-button")
+    private WebElement saveButton;
 
 
 
@@ -114,8 +121,6 @@ public class DialogContent extends _Parent {
             case "yesBtn":
                 myElement = yesBtn;
                 break;
-
-
         }
         clickFunction(myElement);
     }
@@ -126,6 +131,8 @@ public class DialogContent extends _Parent {
              * Burada adından hangi eleman olduğu bulunuyor
              * ve sonra tıklanıyor.
              */
+//            List<WebElement> itemNameList = driver.findElements(By.xpath("//span[text()='Add to Cart']"));
+//            itemNameList.get(0).click();//incelenecek
 
             switch (ElementName) {
                 case "username":
@@ -140,6 +147,15 @@ public class DialogContent extends _Parent {
                 case "erstSearchName":
                     myElement = erstSearchName;
                     break;
+                case "nameInput":
+                    myElement = nameInput;
+                    break;
+                case "shortnameInput":
+                    myElement = shortnameInput;
+                    break;
+
+
+
 
             }
 
@@ -181,50 +197,22 @@ public class DialogContent extends _Parent {
                wait.until(ExpectedConditions.invisibilityOfAllElements(msjContainer));
        }
 
-        // yukarıdaki bölüm mesajlar kaybolmadan edit ve deleteye tıklatamıyordu ,
-        // yukarıdaki kod ile bu eleman invisible olana kadar bekle dedik.
-
-        // aşağıda editOrDelete den gelen edit veya delete kelimesine
-        // göre hangi buton tipine tıklatılacaksa onun LİST i alınıyor.
-        List<WebElement> btnList = new ArrayList<>();
 
        WebElement e;
         searchText("erstSearchName",Name);
 
         if (editOrDelete.equalsIgnoreCase("delete")) {
-          //  btnList = waitVisibleListAllElement(deleteButtonList);
 
             wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("ms-delete-button>button"),1));
             e= driver.findElement(By.cssSelector("ms-delete-button>button"));
         }else{
 
-          // btnList = waitVisibleListAllElement(editButtonList);
-          //  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table//*[contains(text(),'text')]")));
+
              wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("ms-edit-button>button"),1));
              e= driver.findElement(By.cssSelector("ms-edit-button>button"));
 
         }
         clickFunction(e);
-
-        // nameList içerisinde (table ın 2 stunundaki isimlerin olduğu
-        // liste) ülke adı aranıyor. bulunduğunda o indexteki butona
-        // (edit veya delete) tıklanarak. Dialog penceresi açılıyor.
-
-
-        // sayfa yenilendiğinde isimler değişiyor, bu yüzden
-        // tekrar bulması için süre eklendi.(stale problemini burası çözdü)
-
-
-//        List<WebElement> nameListNew = waitVisibleListAllElement(nameList);
-//        for (int i = 0; i < nameListNew.size(); i++) {
-//            System.out.println(i+" "+nameListNew.toString());
-//            if (nameListNew.get(i).getText().equalsIgnoreCase(Name)) {
-//                clickFunction(btnList.get(i));
-//            }
-//        }
-
-        // ekranda tıklandıktan sonra izleyebilmek için kondu
-        // waiting(5000);
     }
 
 

@@ -41,7 +41,7 @@ public class _Parent {
 
     public void sendKeysFunction(WebElement element, String value)
     {
-        waitUntilVisible(element);// elelman görünüt olana kadar bekle
+        waitUntilVisible(element);// eleman görünüt olana kadar bekle
         scrollToElement(element);// elemana kadar scroll yap
         element.clear();// eleman clear yap
         element.sendKeys(value);// value yi gönder
