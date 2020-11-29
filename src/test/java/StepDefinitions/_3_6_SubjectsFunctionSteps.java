@@ -7,7 +7,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-
+//Talip Bey
 public class _3_6_SubjectsFunctionSteps {
     DialogContent dialogContent=new DialogContent();
     LeftNav leftNav=new LeftNav();
