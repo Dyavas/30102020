@@ -11,7 +11,6 @@ Feature: ReportExcelTemplate functionality
   Scenario: Create a ReportExcelTemplate
     When Create a ReportExcelTemplate name as "Herne1"
     Then Success message should be displayed
-    Then Success message should be displayed
 
   Scenario:Edit a ReportExcelTemplate
     When Name a ReportExcelTemplate edit the "Herne1" to "Herne2"

@@ -9,7 +9,7 @@ Feature: Salary functionality
     And Navigate to Salary page
   @RegressionTest
   Scenario: Create Salary
-    When Create a Salary
+    When Create a Salary name as "herne"
     Then Success message should be displayed
 
   Scenario:Edit a Salary

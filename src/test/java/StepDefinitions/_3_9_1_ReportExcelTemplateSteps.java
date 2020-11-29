@@ -1,12 +1,11 @@
 package StepDefinitions;
 
+
+
 import Pages.DialogContent;
 import Pages.LeftNav;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
-
-import java.util.List;
 
 public class _3_9_1_ReportExcelTemplateSteps {
     LeftNav leftNav=new LeftNav();
@@ -22,6 +21,7 @@ public class _3_9_1_ReportExcelTemplateSteps {
 
     @When("^Create a ReportExcelTemplate name as \"([^\"]*)\"$")
     public void createAReportExcelTemplateNameAs(String name) {
+       // dialogContent.waiting(500);
         dialogContent.findElementAndClickFunction("addButton");
         dialogContent.findElementAndSendKeysFunction("nameInput",name);
         dialogContent.findElementAndClickFunction("saveBtn");

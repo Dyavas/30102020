@@ -1,7 +1,6 @@
 Feature: Login Functionality
 
   #username ve password girerek login dogrulama
-  @SmokeTest @RegressionTest
   Scenario: Login with valid username and password
 
     #Siteyi ac- Basqar a git

@@ -12,20 +12,21 @@ Feature: SalaryConstants functionality
     And Click to addButton
     When Create a SalaryConstants name
       | formNameInput  | deger1     |
-    And Click Date Button
-    When Create a SalaryConstants name
-      | formKeyInput   | Deger3 |
-      | formValueInput | 5 |
+      | formDateInput  | 12/12/2020 |
+      | formKeyInput   | Deger3     |
+      | formValueInput | 5          |
+
 
     And Click Save Button
     Then Success message should be displayed
 
   Scenario: Edit a SalaryConstants
-    And Name a SalaryConstants edit the "deger1"
+   And Name a SalaryConstants edit the "deger1"
     When Name a SalaryConstants edit the
-      | formNameInput  | yenideger1 |
-      | formKeyInput   | yeniDeger3 |
-      | formValueInput | 3 |
+      | formNameInput  | Yenideger1     |
+      | formDateInput  | 10/12/2020 |
+      | formKeyInput   | YeniDeger3     |
+      | formValueInput | 10          |
 
     And Click Save Button
     Then Success message should be displayed

@@ -1,8 +1,8 @@
 package StepDefinitions;
 
+
 import Pages.DialogContent;
 import Pages.LeftNav;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -15,14 +15,6 @@ public class _3_8_1_SalaryPositionSteps {
         leftNav.findElementAndClickFunction("humanResources");
         leftNav.findElementAndClickFunction("humanSetup");
         leftNav.findElementAndClickFunction("positionSalary");
-    }
-
-    @When("^Create a Salary$")
-    public void createASalary() {
-        dialogContent.findElementAndClickFunction("addButton");
-        dialogContent.findElementAndSendKeysFunction("newInput","Herne");
-        dialogContent.findElementAndClickFunction("saveBtn");
-
     }
 
     @Then("^Success message should be displayed$")
@@ -42,5 +34,14 @@ public class _3_8_1_SalaryPositionSteps {
     public void nameDeleteThe(String nameOfsalaryToDelete)  {
         dialogContent.editAndDeleteFunction(nameOfsalaryToDelete,"delete");
         dialogContent.findElementAndClickFunction("yesBtn");
+    }
+
+    @When("^Create a Salary name as \"([^\"]*)\"$")
+    public void createASalaryNameAs(String name) {
+        dialogContent.findElementAndClickFunction("addButton");
+        dialogContent.findElementAndSendKeysFunction("newInput",name);
+        dialogContent.findElementAndClickFunction("saveBtn");
+
+
     }
 }

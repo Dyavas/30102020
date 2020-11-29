@@ -1,19 +1,19 @@
 package StepDefinitions;
 
+
+
 import Pages.DialogContent;
 import Pages.FormContent;
 import Pages.LeftNav;
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class _3_10_1_SalaryModifiersSteps {
     LeftNav leftNav=new LeftNav();
-    DialogContent dialogContent=new DialogContent();
+    DialogContent dialogContent =new DialogContent();
     FormContent formContent=new FormContent();
     //SlaryModifiers Sec
     @And("^Navigate to SalaryModifiers page$")
@@ -41,6 +41,7 @@ public class _3_10_1_SalaryModifiersSteps {
 
     @And("^Click Save Button$")
     public void clickSaveButton() {
+        formContent.waiting(500);
         formContent.findElementAndClickFunction("formSaveButton");
     }
 
@@ -58,6 +59,7 @@ public class _3_10_1_SalaryModifiersSteps {
 
     @When("^Name a SalaryModifiers delete$")
     public void nameASalaryModifiersDelete(DataTable elements) {
+        dialogContent.waiting(500);
         List<List<String>> elementList=elements.asLists(String.class);
         dialogContent.waiting(1000);
         for (int i = 0; i < elementList.size() ; i++) {

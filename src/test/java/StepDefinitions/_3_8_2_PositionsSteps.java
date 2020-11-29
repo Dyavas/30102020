@@ -1,9 +1,10 @@
 package StepDefinitions;
 
+
+
 import Pages.DialogContent;
 import Pages.FormContent;
 import Pages.LeftNav;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 
@@ -25,7 +26,7 @@ public class _3_8_2_PositionsSteps {
 
     @When("^Create a Positions name as \"([^\"]*)\" and shortName as \"([^\"]*)\"$")
     public void createAPositionsNameAsAndShortNameAs(String name, String shortName)  {
-
+        dialogContent.waiting(1000);
         dialogContent.findElementAndClickFunction("addButton");
         formContent.findElementAndSendKeysFunction("nameInput", name);
         dialogContent.findElementAndSendKeysFunction("shortnameInput", shortName);
