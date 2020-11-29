@@ -93,8 +93,35 @@ public class _Parent {
 
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
 
+    }
+    public boolean girdiSayiMi(String str) {
+        return str.matches("-?\\d+(\\.\\d+)?");
+    }
 
+    public void selectOptionByString(List<WebElement> elementList, String str) {
+        str = str.trim();
+        if (girdiSayiMi(str)) {
+            if (Integer.parseInt(str) < elementList.size()) {
+                clickFunction(selectOptions(elementList, Integer.parseInt(str)));
+            }
+        } else {
+            clickFunction(selectOptions(elementList, str));
+        }
+    }
 
+    public WebElement selectOptions(List<WebElement> elementList, String value) {
+        WebElement elementSelected = null;
+        for (WebElement element : elementList) {
+            if (element.getText().toLowerCase().contains(value.toLowerCase())) {
+                elementSelected = element;
+                break;
+            }
+        }
+        return elementSelected;
+    }
+
+    public WebElement selectOptions(List<WebElement> elementList, int index) {
+        return elementList.get(index);
     }
 
 }
