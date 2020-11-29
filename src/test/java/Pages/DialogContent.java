@@ -1,19 +1,19 @@
 package Pages;
 
+import okhttp3.internal.connection.RouteSelector;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DialogContent extends _Parent {
-    WebElement myElement;
 
-    //buradaki driver silindi çünkü Parentten geliyor.gerek kalmadı
     public DialogContent() {
         PageFactory.initElements(driver, this);
     }
@@ -89,8 +89,102 @@ public class DialogContent extends _Parent {
     @FindBy(xpath = "//ms-dialog-buttons//ms-save-button")
     private WebElement saveButton;
 
+//zeynep hanim method
+
+    @FindBy(xpath = "(//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button)[2]")
+    private WebElement countyCity;
 
 
+    @FindBy(xpath = "(//ms-text-field[@placeholder='GENERAL.FIELD.NAME']/input)[3]")
+    private WebElement countryNameInput;
+
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.CODE']/input")
+    private WebElement countryCodeInput;
+
+
+    @FindBy(xpath = "(//ms-save-button//button)[2]")
+    private WebElement countrySaveButton;
+
+    @FindBy(xpath = "//mat-form-field[@formgroupname='country']")
+    private WebElement countryOfTheCity;
+    @FindBy (xpath = "//ms-text-field[@formcontrolname='code']/input")
+    private WebElement codeInput;
+
+    @FindAll(
+            {
+                    @FindBy(css = "mat-option[role='option']")
+            }
+    )
+    public List<WebElement> countryOfTheCityDropDown;
+
+
+    @FindAll({
+            @FindBy(css = "mat-option[role='option']")
+    })
+    private List<WebElement> option;
+
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
+    private WebElement cityAddName;
+
+    @FindBy(xpath = "//ms-save-button//button")
+    private WebElement citySaveButton;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
+    private WebElement subjectName;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
+    private WebElement subCodeClick;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
+    private WebElement subjectCode;
+    @FindBy(xpath = "(//span[@class='mat-button-wrapper']/fa-icon)[38]")
+    private WebElement smallAddBtn;
+    @FindBy(xpath = "(//ms-text-field[@formcontrolname='name']/input)[2]")
+    private WebElement newNameInput;
+    @FindBy(xpath = "(//ms-text-field[@formcontrolname='code']/input)[2]")
+    private WebElement newCodeClick;
+    @FindBy(xpath = "(//ms-text-field[@formcontrolname='code']/input)[2]")
+    private WebElement newCodeInput;
+    @FindBy(xpath = "(//ms-save-button[@class='ng-star-inserted'])[2]")
+    private WebElement smallsaveBtn;
+    @FindBy(xpath = "(//mat-select[@role='combobox'])[3]")
+    private WebElement subCategoryClick;
+    @FindBy(xpath = "(//mat-option[@role='option'])[1]")
+    private WebElement subCategory;
+    @FindBy(xpath = "(//mat-select[@role='combobox'])[4]")
+    private WebElement styleClick;
+    @FindBy(xpath = "(//div[@role='listbox']/mat-option)[4]")
+    private WebElement styleInputBlue;
+
+
+    WebElement myElement;
+
+
+    public void findElementAndSelectOption(String listName, String secenek) {
+        selectOptionByString(findWebElementList(listName), secenek);
+    }
+
+
+    List<WebElement> myElementList=new ArrayList<>();
+    public List<WebElement> findWebElementList(String webElementListName) {
+        switch (webElementListName) {
+
+            case "deleteButtonList":
+                myElementList = deleteButtonList;
+
+            case "nameList":
+                myElementList = nameList;
+                break;
+            case "countryOfTheCityDropDown":
+                myElementList = countryOfTheCityDropDown;
+
+            case "option":
+                myElementList = option;
+                break;
+        }
+        return myElementList;
+    }
+
+    //mothod bitisi
     public void findElementAndClickFunction(String ElementName) {
         /**
          * Buraya tıklanacak butonun adı gönderilecek
@@ -121,6 +215,46 @@ public class DialogContent extends _Parent {
             case "yesBtn":
                 myElement = yesBtn;
                 break;
+            case "countyCity":
+                myElement = countyCity;
+                break;
+            case "countrySaveButton":
+                myElement = countrySaveButton;
+                break;
+
+            case "countryOfTheCity":
+                myElement = countryOfTheCity;
+                break;
+
+            case "citySaveButton":
+                myElement = citySaveButton;
+                break;
+            case "subCodeClick":
+                myElement = subCodeClick;
+                break;
+            case "smallAddBtn":
+                myElement = smallAddBtn;
+                break;
+            case "newCodeClick":
+                myElement = newCodeClick;
+                break;
+            case "smallsaveBtn":
+                myElement = smallsaveBtn;
+                break;
+            case "subCategoryClick":
+                myElement = subCategoryClick;
+                break;
+            case "subCategory":
+                myElement = subCategory;
+                break;
+            case "styleClick":
+                myElement = styleClick;
+                break;
+            case "styleInputBlue":
+                myElement = styleInputBlue;
+                break;
+
+
         }
         clickFunction(myElement);
     }
@@ -153,8 +287,33 @@ public class DialogContent extends _Parent {
                 case "shortnameInput":
                     myElement = shortnameInput;
                     break;
-
-
+                case "countryCodeInput":
+                    myElement = countryCodeInput;
+                    break;
+                case "codeInput":
+                    myElement = codeInput;
+                    break;
+                case "countryNameInput":
+                    myElement = countryNameInput;
+                    break;
+                case "cityAddName":
+                    myElement = cityAddName;
+                    break;
+                case "subCodeClick":
+                    myElement = subCodeClick;
+                    break;
+                case "subjectName":
+                    myElement = subjectName;
+                    break;
+                case "subjectCode":
+                    myElement = subjectCode;
+                    break;
+                case "newNameInput":
+                    myElement = newNameInput;
+                    break;
+                case "newCodeInput":
+                    myElement = newCodeInput;
+                    break;
 
 
             }
@@ -186,6 +345,7 @@ public class DialogContent extends _Parent {
         sendKeysFunction(myElement, text);
         clickFunction(SearchBtn);
     }
+
 
     public void editAndDeleteFunction(String Name, String editOrDelete) {
 
@@ -225,6 +385,5 @@ public class DialogContent extends _Parent {
             }
         }
     }
-
 
 }
