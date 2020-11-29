@@ -42,12 +42,28 @@ public class FormContent extends _Parent {
     private WebElement formNameInput;
     @FindBy(xpath = "//input[@data-placeholder='Valid From']")
     private WebElement formDateInput;
-    @FindBy(xpath = "//div[@class='mat-calendar-body-cell-content mat-focus-indicator mat-calendar-body-today']")
-    private WebElement formDateInput2;
+    @FindBy(xpath = "//div[@class='cdk-overlay-container']")
+    private WebElement formDiv;
     @FindBy(xpath = "(//ms-dialog-content//input)[4]")
     private WebElement formKeyInput;
     @FindBy(xpath = "(//ms-dialog-content//input)[5]")
     private WebElement formValueInput;
+    @FindBy(xpath = "(//span[@class='mat-button-wrapper'])[8]/fa-icon")
+    private WebElement addBTN;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
+    private WebElement bankName;
+    @FindBy(xpath = "//ms-masked-text-field[@formcontrolname='iban']/input")
+    private WebElement ibanclick;
+    @FindBy(xpath = "//ms-masked-text-field[@formcontrolname='iban']/input")
+    private WebElement ibanCode;
+    @FindBy(xpath = "(//mat-select[@role='combobox'])[3]")
+    private WebElement currencyClick;
+    @FindBy(xpath = "//span[text()=' USD ']")
+    private WebElement currencyDoviz;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='integrationCode']/input")
+    private WebElement integrationClick;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='integrationCode']/input")
+    private WebElement integrationCode;
 
 
     public void findElementAndClickFunction(String ElementName) {
@@ -71,8 +87,24 @@ public class FormContent extends _Parent {
             case "formDateInput":
                 myElement = formDateInput;
                 break;
-            case "formDateInput2":
-                myElement = formDateInput2;
+            case "formDiv":
+                myElement = formDiv;
+                break;
+            case "addBTN":
+                myElement = addBTN;
+                break;
+            case "ibanclick":
+                myElement = ibanclick;
+                break;
+            case "currencyClick":
+                myElement = currencyClick;
+                break;
+            case "integrationClick":
+                myElement = integrationClick;
+                break;
+
+            case "currencyDoviz":
+                myElement = currencyDoviz;
                 break;
         }
         clickFunction(myElement);
@@ -112,15 +144,18 @@ public class FormContent extends _Parent {
             case "formKeyInput":
                 myElement=formKeyInput;
                 break;
-            case "formDateInput2":
-                myElement = formDateInput2;
+            case "ibanCode":
+                myElement = ibanCode;
                 break;
-
-
-
-
-
-
+            case "currencyDoviz":
+                myElement = currencyDoviz;
+                break;
+            case "integrationCode":
+                myElement = integrationCode;
+                break;
+            case "bankName":
+                myElement = bankName;
+                break;
 
 
         }
