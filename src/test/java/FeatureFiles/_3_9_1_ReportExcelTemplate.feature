@@ -12,10 +12,12 @@ Feature: ReportExcelTemplate functionality
     When Create a ReportExcelTemplate name as "Herne1"
     Then Success message should be displayed
 
+  @RegressionTest
   Scenario:Edit a ReportExcelTemplate
     When Name a ReportExcelTemplate edit the "Herne1" to "Herne2"
     Then Success message should be displayed
 
+  @RegressionTest
   Scenario: Delete a ReportExcelTemplate
     When Name a ReportExcelTemplate delete The "Herne2"
     Then Success message should be displayed

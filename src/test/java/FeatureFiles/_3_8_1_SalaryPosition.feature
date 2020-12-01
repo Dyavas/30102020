@@ -12,10 +12,12 @@ Feature: Salary functionality
     When Create a Salary name as "herne"
     Then Success message should be displayed
 
+  @RegressionTest
   Scenario:Edit a Salary
     When Name edit the "herne" to "Nrw"
     Then Success message should be displayed
 
+  @RegressionTest
   Scenario: Delete a Salary
     When Name delete The "Nrw"
     Then Success message should be displayed

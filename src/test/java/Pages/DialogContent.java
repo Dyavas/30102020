@@ -44,22 +44,17 @@ public class DialogContent extends _Parent {
     private WebElement ErrorMessage;
 
     @FindBy(xpath = "//ms-add-button//button")
-    ////ms-add-button
     private WebElement addButton;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='title']/input")
     private WebElement newInput;
     @FindBy(xpath = "//ms-save-button[@class='ng-star-inserted']")
     private WebElement saveBtn;
-
     @FindBy(xpath = "(//input[@matinput])[1]")
     private WebElement erstSearchName;
-
     @FindBy(xpath = "//span[text()=' Search ']")
     private WebElement SearchBtn;
-
     @FindBy(xpath = "ms-table#ms-table-6 > div > table > tbody > tr > td:nth-of-type(2)")
     private WebElement Searchsnc;
-
     @FindAll({
             @FindBy(xpath = "//table/tbody/tr/td[2]")
     })
@@ -77,8 +72,6 @@ public class DialogContent extends _Parent {
             @FindBy(xpath = "//span[@class='mat-option-text']")
     })
     public List<WebElement> userTypeAllOptions;
-
-
     @FindBy(xpath = "//span[text()=' Yes ']")
     private WebElement yesBtn;
 
@@ -93,62 +86,48 @@ public class DialogContent extends _Parent {
 
     @FindBy(xpath = "(//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button)[2]")
     private WebElement countyCity;
-
-
     @FindBy(xpath = "(//ms-text-field[@placeholder='GENERAL.FIELD.NAME']/input)[3]")
     private WebElement countryNameInput;
-
-    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.CODE']/input")
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.CODE']/input")//ayni
     private WebElement countryCodeInput;
-
-
     @FindBy(xpath = "(//ms-save-button//button)[2]")
     private WebElement countrySaveButton;
-
     @FindBy(xpath = "//mat-form-field[@formgroupname='country']")
     private WebElement countryOfTheCity;
-    @FindBy (xpath = "//ms-text-field[@formcontrolname='code']/input")
+    @FindBy (xpath = "//ms-text-field[@formcontrolname='code']/input")//ayni
     private WebElement codeInput;
 
-    @FindAll(
-            {
-                    @FindBy(css = "mat-option[role='option']")
-            }
-    )
-    public List<WebElement> countryOfTheCityDropDown;
-
-
     @FindAll({
-            @FindBy(css = "mat-option[role='option']")
+             @FindBy(css = "mat-option[role='option']")//ayni
+            })
+    public List<WebElement> countryOfTheCityDropDown;
+        @FindAll({
+            @FindBy(css = "mat-option[role='option']")//ayni
     })
     private List<WebElement> option;
-
-
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")//ayni
     private WebElement cityAddName;
-
     @FindBy(xpath = "//ms-save-button//button")
     private WebElement citySaveButton;
-
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")//ayni
     private WebElement subjectName;
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")//ayni
     private WebElement subCodeClick;
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")//ayni
     private WebElement subjectCode;
     @FindBy(xpath = "(//span[@class='mat-button-wrapper']/fa-icon)[38]")
     private WebElement smallAddBtn;
     @FindBy(xpath = "(//ms-text-field[@formcontrolname='name']/input)[2]")
     private WebElement newNameInput;
-    @FindBy(xpath = "(//ms-text-field[@formcontrolname='code']/input)[2]")
+    @FindBy(xpath = "(//ms-text-field[@formcontrolname='code']/input)[2]")//ayni
     private WebElement newCodeClick;
-    @FindBy(xpath = "(//ms-text-field[@formcontrolname='code']/input)[2]")
+    @FindBy(xpath = "(//ms-text-field[@formcontrolname='code']/input)[2]")//ayni
     private WebElement newCodeInput;
     @FindBy(xpath = "(//ms-save-button[@class='ng-star-inserted'])[2]")
     private WebElement smallsaveBtn;
     @FindBy(xpath = "(//mat-select[@role='combobox'])[3]")
     private WebElement subCategoryClick;
-    @FindBy(xpath = "(//mat-option[@role='option'])[1]")
+    @FindBy(xpath = "(//mat-option[@role='option'])[1]")//ayni
     private WebElement subCategory;
     @FindBy(xpath = "(//mat-select[@role='combobox'])[4]")
     private WebElement styleClick;
@@ -156,15 +135,17 @@ public class DialogContent extends _Parent {
     private WebElement styleInputBlue;
 
 
+
     WebElement myElement;
 
 
     public void findElementAndSelectOption(String listName, String secenek) {
         selectOptionByString(findWebElementList(listName), secenek);
+
     }
 
-
     List<WebElement> myElementList=new ArrayList<>();
+
     public List<WebElement> findWebElementList(String webElementListName) {
         switch (webElementListName) {
 
@@ -253,6 +234,7 @@ public class DialogContent extends _Parent {
             case "styleInputBlue":
                 myElement = styleInputBlue;
                 break;
+
 
 
         }

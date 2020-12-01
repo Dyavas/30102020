@@ -19,7 +19,8 @@ public class FormContent extends _Parent {
     private WebElement nameInput;
     @FindBy(xpath = "(//ms-text-field[@formcontrolname='shortName']/input")
     private WebElement shortnameInput;
-
+    @FindBy (xpath = "//ms-text-field[@formcontrolname='code']/input")//ayni
+    private WebElement codeInput;
     @FindBy(xpath = "//ms-dialog-buttons//ms-save-button")
     private WebElement saveButton;
 
@@ -64,6 +65,18 @@ public class FormContent extends _Parent {
     private WebElement integrationClick;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='integrationCode']/input")
     private WebElement integrationCode;
+    @FindBy(xpath = "(//mat-select[@role='combobox'])[2]")
+    private WebElement typeSelect;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='orderNo']/input")
+    private WebElement orderInput;
+    @FindBy(xpath = "//mat-chip-list//input")
+    private WebElement expenseSelect;
+    @FindBy(xpath = "(//ms-edit-button/button)[1]")
+    private WebElement firstValue;
+    @FindBy(xpath = "(//ms-delete-button/button)[1]")
+    private WebElement secondValue;
+
+
 
 
     public void findElementAndClickFunction(String ElementName) {
@@ -106,6 +119,17 @@ public class FormContent extends _Parent {
             case "currencyDoviz":
                 myElement = currencyDoviz;
                 break;
+            case "typeSelect":
+                myElement = typeSelect;
+                break;
+            case "firstValue":
+                myElement = firstValue;
+                break;
+            case "secondValue":
+                myElement = secondValue;
+                break;
+
+
         }
         clickFunction(myElement);
     }
@@ -156,7 +180,15 @@ public class FormContent extends _Parent {
             case "bankName":
                 myElement = bankName;
                 break;
-
+            case "orderInput":
+                myElement = orderInput;
+                break;
+            case "expenseSelect":
+                myElement = expenseSelect;
+                break;
+            case "codeInput":
+                myElement = codeInput;
+                break;
 
         }
         sendKeysFunction(myElement,value);

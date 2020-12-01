@@ -3,6 +3,7 @@ Feature: Positions functionality
   #Yeni bir Positions oluşturun onu DUZENLEYIN (editleyin) ve onu SILIN.
   #Human Resources > Setup > Positions
 
+
   Background:
     Given Navigate to basqar
     When Enter username and password and click Login button
@@ -14,10 +15,12 @@ Feature: Positions functionality
     When Create a Positions name as "herne1" and shortName as "hrn1"
     Then Success message should be displayed
 
+  @RegressionTest
   Scenario:Edit a Positions
     When Name a Positions edit the "herne1" to "herne2"
     Then Success message should be displayed
 
+  @RegressionTest
   Scenario: Delete a Positions
     When Name a Positions delete The "herne2"
     Then Success message should be displayed

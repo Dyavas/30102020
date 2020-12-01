@@ -15,11 +15,10 @@ Feature: SalaryConstants functionality
       | formDateInput  | 12/12/2020 |
       | formKeyInput   | Deger3     |
       | formValueInput | 5          |
-
-
     And Click Save Button
     Then Success message should be displayed
 
+  @RegressionTest
   Scenario: Edit a SalaryConstants
    And Name a SalaryConstants edit the "deger1"
     When Name a SalaryConstants edit the
@@ -27,9 +26,10 @@ Feature: SalaryConstants functionality
       | formDateInput  | 10/12/2020 |
       | formKeyInput   | YeniDeger3     |
       | formValueInput | 10          |
-
     And Click Save Button
     Then Success message should be displayed
+
+  @RegressionTest
   Scenario: Delete a SalaryConstants
     And Name a SalaryConstants delete the "yenideger1"
     Then Success message should be displayed

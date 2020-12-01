@@ -47,6 +47,13 @@ public LeftNav(){
     private WebElement subjectCategories;
     @FindBy(xpath = "(//span[text()='Subjects'])[1]")
     private WebElement subjects;
+    @FindBy(xpath = "(//span[text()='Budget'])[1]")
+    private WebElement budget;
+    @FindBy(xpath = "(//span[text()='Setup'])[6]")
+    private WebElement budgetSetup;
+    @FindBy(xpath = "//span[text()='Cost Centers']")
+    private WebElement costCenter;
+
 
 
 
@@ -58,44 +65,33 @@ public void findElementAndClickFunction(String elementName){
         case "setupOne":
             myElement=setupOne;
             break;
-
         case "parameters":
             myElement=parameters;
             break;
-
         case "countries":
             myElement=countries;
             break;
-
         case "humanResources":
             myElement=humanResources;
             break;
-
         case "humanSetup":
             myElement=humanSetup;
             break;
-
         case "positionSalary":
             myElement=positionSalary;
             break;
-
         case "positions":
             myElement=positions;
             break;
-
         case "reports":
             myElement=reports;
             break;
-
         case "reportSetup":
             myElement=reportSetup;
             break;
-
-
         case "excelTemplate":
             myElement=excelTemplate;
             break;
-
         case "salaryTypes":
             myElement=salaryTypes;
             break;
@@ -111,7 +107,6 @@ public void findElementAndClickFunction(String elementName){
         case "city":
             myElement = city;
             break;
-
         case "education":
             myElement=education;
             break;
@@ -124,6 +119,16 @@ public void findElementAndClickFunction(String elementName){
         case "subjects":
             myElement=subjects;
             break;
+        case "budget":
+            myElement=budget;
+            break;
+        case "budgetSetup":
+            myElement=budgetSetup;
+            break;
+        case "costCenter":
+            myElement=costCenter;
+            break;
+
 
 
 
