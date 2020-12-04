@@ -39,8 +39,8 @@ public class TestRunner extends AbstractTestNGCucumberTests {
                 Reporter.setSystemInfo("User Name", "Ramazan");
                 Reporter.setSystemInfo("Application Name", "Basqar");
                 Reporter.setSystemInfo("Operating System Info", System.getProperty("os.name"));
-                Reporter.setSystemInfo("Department", "QA");
-                Reporter.setSystemInfo("Ek satır Adı", "Satır açıklaması");
+                Reporter.setSystemInfo("Department", "Group 7");
+                Reporter.setSystemInfo("Ek satır Adı", "Group 7 Staj Projesi");
                 Reporter.setTestRunnerOutput("Test excetuion Cucumber report");
         }
 
