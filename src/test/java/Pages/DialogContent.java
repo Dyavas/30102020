@@ -104,7 +104,7 @@ public class DialogContent extends _Parent {
         @FindAll({
             @FindBy(css = "mat-option[role='option']")//ayni
     })
-    private List<WebElement> option;
+        public List<WebElement> option;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")//ayni
     private WebElement cityAddName;
     @FindBy(xpath = "//ms-save-button//button")
@@ -133,6 +133,8 @@ public class DialogContent extends _Parent {
     private WebElement styleClick;
     @FindBy(xpath = "(//div[@role='listbox']/mat-option)[4]")
     private WebElement styleInputBlue;
+    @FindBy (xpath = "//ms-text-field[@formcontrolname='code']/input")//ayni
+    private WebElement formcodeInput;
 
 
 
@@ -161,6 +163,9 @@ public class DialogContent extends _Parent {
             case "option":
                 myElementList = option;
                 break;
+
+
+
         }
         return myElementList;
     }

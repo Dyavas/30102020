@@ -12,11 +12,11 @@ Feature: BankAccount functionality
     When Create a Budget name
     |nameInput|nameDeneme|
     |codeInput|codeDeneme|
-    And Click in the Type new Type form
-    And Create a Select name as "countryOfTheCityDropDown" and value as " Personal "
-    And Create a codeInput name as "orderInput" and value as "3"
-    And Click expenseSelect Button
-    And Create a Select name as "countryOfTheCityDropDown" and value as " 2.2 | Расходы на развитие образовательной деятельности "
+    |typeSelect|  |
+    |countryOfTheCityDropDown| Personal |
+    |orderInput|3|
+    |salaryUserType||
+    |option| 4 |
     And Click Save Button
     Then Success message should be displayed
 
@@ -26,11 +26,11 @@ Feature: BankAccount functionality
     When Create a Budget name
       |nameInput|YeninameDeneme|
       |codeInput|YenicodeDeneme|
-    And Click in the Type new Type form
-    And Create a Select name as "countryOfTheCityDropDown" and value as " Production "
-    And Create a codeInput name as "orderInput" and value as "7"
-    And Click expenseSelect Button
-    And Create a Select name as "countryOfTheCityDropDown" and value as " 2.3 | Расходы на социальные мероприятия/Расходы на рекламу "
+      |typeSelect|  |
+      |countryOfTheCityDropDown| Personal |
+      |orderInput|4|
+      |salaryUserType||
+      |option| 2 |
     And Click Save Button
     Then Success message should be displayed
 

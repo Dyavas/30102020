@@ -32,18 +32,35 @@ public class _3_12_BudgetSteps {
     @When("^Create a Budget name$")
     public void createABudgetName(DataTable elements) {
         List<List<String>> elementList = elements.asLists(String.class);
-
+            int count=0;
         for (int i = 0; i < elementList.size(); i++) {
+            if(i==2) {
+                formContent.findElementAndClickFunction(elementList.get(i).get(0));
+                formContent.waiting(500);
+            }else
+            if(i==5) {
+                formContent.findElementAndClickFunction(elementList.get(i).get(0));
+                formContent.waiting(500);
+            }else
+                if(i==3) {
+
+                    dialogContent.findElementAndSelectOption(elementList.get(i).get(0), elementList.get(i).get(1));
+                    formContent.waiting(500);
+                }else
+                if(i==6) {
+
+                    dialogContent.findElementAndSelectOption(elementList.get(i).get(0), elementList.get(i).get(1));
+                    formContent.waiting(500);
+                }else
 
             formContent.findElementAndSendKeysFunction(elementList.get(i).get(0), elementList.get(i).get(1));
-
         }
 
     }
 
     @And("^Click in the Type new Type form$")
     public void clickInTheTypeNewTypeForm() {
-        formContent.findElementAndClickFunction("typeSelect");
+        formContent.findElementAndClickFunction("expenseSelect");
 
     }
 

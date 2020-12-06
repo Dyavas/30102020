@@ -37,7 +37,7 @@ public class _3_10_2_SalaryConstantsSteps {
             formContent.findElementAndSendKeysFunction(elementList.get(i).get(0), elementList.get(i).get(1));
                 formContent.waiting(200);
                 }
-           formContent.findElementAndClickFunction(elementList.get(i).get(0));
+            formContent.findElementAndClickFunction(elementList.get(i).get(0));
             formContent.findElementAndSendKeysFunction(elementList.get(i).get(0), elementList.get(i).get(1));
             formContent.waiting(200);
             formContent.findElementAndClickFunction("formDiv");

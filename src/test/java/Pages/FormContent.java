@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FormContent extends _Parent {
@@ -69,13 +70,10 @@ public class FormContent extends _Parent {
     private WebElement typeSelect;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='orderNo']/input")
     private WebElement orderInput;
-    @FindBy(xpath = "//mat-chip-list//input")
-    private WebElement expenseSelect;
     @FindBy(xpath = "(//ms-edit-button/button)[1]")
     private WebElement firstValue;
     @FindBy(xpath = "(//ms-delete-button/button)[1]")
     private WebElement secondValue;
-
 
 
 
@@ -182,9 +180,6 @@ public class FormContent extends _Parent {
                 break;
             case "orderInput":
                 myElement = orderInput;
-                break;
-            case "expenseSelect":
-                myElement = expenseSelect;
                 break;
             case "codeInput":
                 myElement = codeInput;

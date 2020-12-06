@@ -95,6 +95,7 @@ public class _Parent {
 
     }
     public boolean girdiSayiMi(String str) {
+
         return str.matches("-?\\d+(\\.\\d+)?");
     }
 
